@@ -17,7 +17,7 @@ public class TransactionServiceImpl implements TransactionService {
     private final TransactionRepo transactionRepo;
 
     @Override
-    public AccountTransaction addTransaction(AccountTransaction accountTransaction) throws Exception {
+    public AccountTransaction addTransaction(AccountTransaction accountTransaction) {
         accountTransaction.setCreated(Instant.now());
        return transactionRepo.save(accountTransaction);
     }
